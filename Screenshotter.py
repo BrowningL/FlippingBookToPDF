@@ -14,6 +14,7 @@ def press():
     keyboard.release(Key.right)
 
 #take screenshot
+#You can edit the region for each screenshot to match your screen
 def screenshot(pageNumber):
     #FirstPage
     myScreenshot = pyautogui.screenshot(region=(315,158, 1303, 1843))
@@ -25,11 +26,12 @@ def screenshot(pageNumber):
 
 
 #MainLoop
+#You can edit loop number for however many pages are in the textbook
 for c in range(155):
     #Take two screenshots of each page
     screenshot(pageNumber)
     pageNumber += 2
     #Change page
     press()
-    #wait 1 second
+    #wait 2 seconds for page to update
     time.sleep(2)
